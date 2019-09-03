@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Userchat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pro"
+        android:background="@drawable/edit3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+
+            android:background="@drawable/profile"
+          />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owner Name"
+                android:id="@+id/on"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:id="@+id/mn"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclechat"
+        android:layout_above="@+id/up"
+        android:layout_below="@+id/pro"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/up"
+        android:layout_alignParentBottom="true">
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/edit3"
+            android:id="@+id/inputtext"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="send"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/colorAccent"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/send"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

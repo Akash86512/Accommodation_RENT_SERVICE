@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home">
+
+
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/location"/>
+
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_places"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+            android:layout_marginLeft="42dp"
+            android:padding="5dp"
+            android:inputType="text"
+            android:layout_marginRight="15dp"
+
+            android:hint="Search Location"
+            android:gravity="center"
+            android:background="@drawable/edit3"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/autocomplete_places"
+        android:layout_alignParentRight="true"
+
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycle"
+        android:layout_below="@+id/spinner"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>
